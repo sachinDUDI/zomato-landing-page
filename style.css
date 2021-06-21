@@ -1,0 +1,54 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /*specifying the browser to use box model*/
+}
+body{
+    font-family: "Source Sans Pro", sans-serif;
+    background-color: #ebf2ff;
+
+}
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #fff
+}
+/*don't provide height and width of the image as image has its own sizes. use div instead as div will work as a container what the size of div should be the size of its content.*/
+.navbar__brand{
+    width: 100px;
+}
+.navbar__logo{
+    width: 100%;
+}
+.nav__item{
+    background-image: linear-gradient(
+        to right,
+        #ff512f 0%,
+        #dd2476 51%,
+        #ff512f 100%
+    );
+    color: #fff;
+    border: none;
+    padding: 12px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+.nav__item:hover{
+   border: 4px solid pink;
+
+}
+@media (min-width: 768px){
+    .navbar{
+        justify-content: space-between;
+        padding: 5px/*<--right left-->*/ 30px ; 
+}
+@media (min-width: 1020px){
+    .navbar__brand{
+        width:"150px"
+    }
+    .nav__item{
+        padding: 20px;
+        font-size: 20px;
+    }
+}
